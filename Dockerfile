@@ -5,6 +5,8 @@ WORKDIR /elk
 
 FROM base AS builder
 
+ENV NUXT_PUBLIC_DEFAULT_SERVER=serenityos.social
+
 # Prepare pnpm https://pnpm.io/installation#using-corepack
 RUN corepack enable
 
@@ -49,7 +51,6 @@ ENV PORT=5314
 
 # Specify container only environment variables ( can be overwritten by runtime env )
 ENV NUXT_STORAGE_FS_BASE='/elk/data'
-ENV NUXT_PUBLIC_DEFAULT_SERVER=serenityos.social
 
 # Persistent storage data
 VOLUME [ "/elk/data" ]
