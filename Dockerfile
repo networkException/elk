@@ -49,6 +49,7 @@ ENV PORT=5314
 
 # Specify container only environment variables ( can be overwritten by runtime env )
 ENV NUXT_STORAGE_FS_BASE='/elk/data'
+ENV NUXT_PUBLIC_DEFAULT_SERVER=serenityos.social
 
 # Persistent storage data
 VOLUME [ "/elk/data" ]
